@@ -1,11 +1,53 @@
+main {
+  background-color: rgb(24, 26, 27);
+}
+
+/*  -------------------nav------------------- */
 .ul-de-nav {
   display: flex;
   flex-grow: 1;
   justify-content: center;
 }
 
+.logo {
+  justify-content: start;
+}
+
+.inp-search {
+  padding: 0rem;
+  text-align: center;
+  font-size: .9rem;
+  padding: 0 0 0 .6rem;
+}
 
 
+.form-control:focus {
+  color: rgb(0, 0, 0);
+  background-color: var(--bs-body-bg);
+  border-color: transparent;
+  outline: 0;
+  box-shadow: 0 0 0 .25rem transparent;
+}
+
+.img-nav-i-c {
+  height: 30px;
+}
+
+/* -------------------carrusel de img------------------- */
+
+.seccion-carrusel-img {
+  margin-bottom: 9rem;
+}
+
+/*  -------------------video------------------- */
+
+.video-background {
+  max-width: 100%;
+  object-fit: cover;
+  min-height: 100vh;
+}
+
+/*  -------------------carrusel------------------- */
 .carousel-control-prev,
 .carousel-control-next {
   background-color: gray;
@@ -16,7 +58,48 @@
   transform: translateY(-50%);
 }
 
+/* -------------------categorias------------------- */
+.conten-tegorias {
+  margin-top: 5rem;
+  height: 100vh;
+}
+
+.card-text-categoria {
+  background-image: url(https://equusio.vtexassets.com/arquivos/ids/250840-500-auto?v=638122680304400000&width=500&height=auto&aspect=true);
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 3rem;
+  align-items: center;
+}
+
+.card-text-categoria a {
+  width: 80%;
+}
+
+.card-text-categoria h5 {
+  flex-grow: 1;
+}
+
+.card-categoria {
+  width: 17rem;
+}
+
+
+footer {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  background-color: rgb(21, 21, 21);
+  color: whitesmoke;
+}
+
 @media screen and (min-width: 567px) {
+  header {
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+  }
+
   .card-wrapper {
     display: flex;
   }
@@ -30,7 +113,11 @@
 
 
 @media screen and (max-width: 567px) {
-  .card:not(:first-child) {
+  .cards-carrusel:not(:first-child) {
     display: none;
+  }
+
+  .card-categoria {
+    width: 94%;
   }
 }
